@@ -24,6 +24,8 @@ def display_file():
             file.seek(0)  # Reseta o ponteiro do arquivo
             df = pd.read_csv(file, encoding='ISO-8859-1', delimiter=";")
 
+        print("teste push")
+
     # Renderiza o template com os dados do arquivo CSV
     return render_template('display.html', tables=[df.to_html(classes='data')], titles=df.columns.values)
 
